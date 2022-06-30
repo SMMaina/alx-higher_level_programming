@@ -22,6 +22,6 @@ if __name__ == "__main__":
             print("{}".format{error[1]))
             exit(1)
     else:
-        print("{}".format(arror[0]))
+        print("{}".format(error[0]))
         exit(1)
 
