@@ -5,7 +5,7 @@ if __name__ == "__main__":
     operator = '+-*/'
     argno = len(sys.argv) - 1
     errormsg = ["Usage: ./100-my_calculator.py <a> <operator> <b>",
-             "Unknown operator. Available operators: +, -, * and /"]
+                "Unknown operator. Available operators: +, -, * and /"]
     if argno == 3:
         if sys.argv[2] in operator:
             a = int(sys.argv[1])
@@ -19,7 +19,7 @@ if __name__ == "__main__":
             if sys.argv[2] == operator[3]:
                 print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
         else:
-            print("{}".format{errormsg[1]))
+            print("{}".format(errormsg[1]))
             exit(1)
     else:
         print("{}".format(errormsg[0]))
