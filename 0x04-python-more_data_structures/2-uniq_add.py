@@ -5,5 +5,5 @@ def uniq_add(my_list=[]):
         i = 0
         for item in addlist:
             i += item
-            return (i)
-        return (0)
+        return (i)
+    return (0)
