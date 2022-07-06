@@ -5,6 +5,6 @@ def weight_average(my_list=[]):
         for tuple in my_list:
             sumd += tuple[1]
             multiaxb = tuple[0] * tuple[1]
-            sump = multiaxb
+            sump += multiaxb
         return (sump / sumd)
     return 0
