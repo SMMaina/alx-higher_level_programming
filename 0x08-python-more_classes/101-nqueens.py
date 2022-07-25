@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""solves the puzzle
+"""Solves the N-queens puzzle.
 Determines all possible solutions placing N
 Example:
     $ ./101-nqueens.py N
@@ -63,12 +63,12 @@ def xout(board, row, col):
         if c >= len(board):
             break
         board[r][c] = "x"
-        c == 1
+        c += 1
     c = col - 1
     for r in range(row - 1, -1, -1):
         if c < 0:
             break
-        board[r][c]
+        board[r][c] = "x"
         c -= 1
     c = col + 1
     for r in range(row - 1, -1, -1):
