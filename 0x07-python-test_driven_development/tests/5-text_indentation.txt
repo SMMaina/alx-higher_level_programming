@@ -1,0 +1,64 @@
+"""
+Interactive test for text_indentation function
+
+Import module
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Multiple delimeters cases
+>>> text_indentation("Hi. My name is ann: \
+... What is your problem?")
+Hi.
+<BLANKLINE>
+My name is ann:
+<Blankline>
+What is your problem?
+<BLANKLINE>
+
+>>> text_indentation("Hi. my name is ann: \
+... What is your problem? Welcome to hell")
+Hi.
+<BLANKLINE>
+my name is ann:
+<BLANKLINE>
+What is your problem?
+<BLANKLINE>
+Welcome to hell
+
+no delimeter scenario
+>>> text_indentation("Hi. My name is ann")
+Hi. My name is ann
+
+Leading spaces cases
+>>> text_indentation("   Hi.    My name is ann: \
+... What is your problem?    Welcome to hell    ")
+Hi.
+<BLANKLINE>
+My name is ann:
+<BLANKLINE>
+What is your problem?
+<BLANKLINE>
+Welcome to hell
+
+>>> text_indentation("   Hello.    My name is ann   : \
+... What is your problem   ?  ")
+Hello.
+<BLANKLINE>
+My name is ann  :
+<BLANKLINE>
+What is your problem   ?
+<BLANKLINE>
+
+None string value case(TypeError)
+>>> try:
+...     text_indentation(["hello"])
+... except Exception as e:
+...     print(e)
+text must be a string
+
+>>> try:
+...     text_indentation(("hello", "world"))
+... except Exception as e:
+...     print(e)
+text must be a string
+>>>
+"""
