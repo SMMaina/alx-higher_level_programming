@@ -10,7 +10,7 @@ First import ``MyList`` from the ``1-my_list`` module:
 >>> my_list = MyList()
 >>> print(my_list)
 []
->>> my_list_sorted()
+>>> my_list.print_sorted()
 []
 
 >>> my_list = MyList()
@@ -23,17 +23,7 @@ First import ``MyList`` from the ``1-my_list`` module:
 >>> my_list.print_sorted()
 [4, 8]
 >>> print(my_list)
-[8, 4]
-
->>> my_list = MyList()
->>> my_list.append(7)
->>> my_list.append(5)
->>> print(my_list)
-[7,5]
->>> my_list.print_sorted()
-[5, 7]
->>> print(my_list)
-[7. 5]
+[8,4]
 
 >>> my_list = MyList()
 >>> my_list.append(9)
@@ -102,7 +92,6 @@ string cases:
 >>> my_list = MyList()
 >>> print(my_list)
 []
-
 >>> my_list.append("susan")
 >>> print(my_list)
 ['susan']
