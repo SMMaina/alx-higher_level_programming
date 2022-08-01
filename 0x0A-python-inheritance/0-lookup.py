@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Lookup: function that returns the available list of attributes in a class object
+
 """
 
 
