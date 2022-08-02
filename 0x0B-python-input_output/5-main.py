@@ -1,0 +1,6 @@
+#!/usr/bin/python3
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+
+filename = "mylist.json"
+mylist = [1, 2, 3]
+save_to_json_file(mylist, filename)
