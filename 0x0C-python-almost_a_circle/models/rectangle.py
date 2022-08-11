@@ -95,13 +95,28 @@ class Rectangle(Base):
         e = self.__width
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(a, b, c, e, d)
 
-    def update(self, *args, **keywords):
+    def update(self, *args, **kwargs):
         """ assigns an argument to each attribute in a specific order """
-        if args:
-            attlist = ["id", "width", "height", "x", "y"]
-            for item, value in enumerate(args):
-                if item < 5:
-                    setattr(self, attlist[item], value)
+        if len(args) > 0:
+            for n, arg in enumerate(args):
+                if n == 0:
+                    self.id = arg
+                elif n == 1:
+                    self.width = arg
+                elif n == 2:
+                    self.height = arg
+                elif n == 3:
+                    self.x = arg
+                elif n == 4:
+                    self.y = arg
         else:
-            for key, value in keywords.items():
-                setattr(self, key, value)
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
