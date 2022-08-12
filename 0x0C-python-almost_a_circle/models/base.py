@@ -43,3 +43,13 @@ class Base:
             li = [n.to_dictionary() for n in list_objs]
         with open(cls.__name__ + ".json", "w") as file:
             file.write(cls.to_json_string(li))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ rets a n instnace with all attributes set """
+        if cls.__name__ == "Rectangle":
+            dum = cls(1, 1)
+        else:
+            dum = cls(1)
+        dum.update(**dictionary)
+        return dum
