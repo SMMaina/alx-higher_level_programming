@@ -34,11 +34,24 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ assigns a n arg to each attribute without need of a key word """
-        if args:
-            attlist = ["id", "size", "x", "y"]
-            for item, value in enumerate(args):
-                if item < 4:
-                    setattr(self, attlist[item], value)
+        if len(args) > 0:
+            for n, arg in enumerate(args):
+                if n == 0:
+                    self.id = arg
+                elif n == 1:
+                    super(Square, type(self)).width.fset(self, arg)
+                    super(Square, type(self)).height.fset(self, arg)
+                elif n == 2:
+                    super(Square, type(self)).x.fset(self, arg)
+                elif n == 3:
+                    super(Square, type(self)).y.fset(self, arg)
         else:
-            for k, v in keywords.items():
-                setattr(self, k, v)
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                super(Square, type(self)).width.fset(self, kwargs["size"])
+                super(Square, type(self)).height.fset(self, kwargs["size"])
+            if "x" in kwargs:
+                super(Square, type(self)).x.fset(self, kwargs["x"])
+            if "y" in kwargs:
+                super(Square, type(self)).y.fset(self, kwargs["y"])
