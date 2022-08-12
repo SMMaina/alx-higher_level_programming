@@ -55,3 +55,11 @@ class Square(Rectangle):
                 super(Square, type(self)).x.fset(self, kwargs["x"])
             if "y" in kwargs:
                 super(Square, type(self)).y.fset(self, kwargs["y"])
+
+    def to_dictionary(self):
+        """ conversion of class square to dict """
+        myid = self.id
+        x = super().x
+        y = super().y
+        w = super().width
+        return {'x': x, 'y': y, 'id': myid, 'size': w}
