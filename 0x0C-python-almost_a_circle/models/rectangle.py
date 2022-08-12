@@ -128,4 +128,4 @@ class Rectangle(Base):
         y = self.__y
         h = self.__height
         w = self.__width
-        return {'x': x, 'y': y, 'id' : myid, 'height' : h, 'width' : w}
+        return {'x': x, 'y': y, 'id': myid, 'height': h, 'width': w}
