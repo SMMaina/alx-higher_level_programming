@@ -53,3 +53,23 @@ class Base:
             dum = cls(1)
         dum.update(**dictionary)
         return dum
+
+    @classmethod
+    def load_from_file(cls):
+        """ returns a list of instanes """
+        try:
+            f = open(str(cls.__name__) + ".json")
+            f.close()
+        except:
+            return []
+
+        li = []
+        with open(str(cls.__name__) + ".json", "r") as f:
+            li = cls.from_json_string(f.read())
+
+        instances = len(li)
+        inst = []
+        for t in range(instances):
+            inst.append(cls.create(**li[t]))
+
+        return inst
