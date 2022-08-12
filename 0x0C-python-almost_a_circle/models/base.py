@@ -37,7 +37,7 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ writes json rep of list_objs to a file """
-        if list_objs is None or list_objes == []:
+        if list_objs is None or list_objs == []:
             li = []
         else:
             li = [n.to_dictionary() for n in list_objs]
